@@ -80,7 +80,9 @@ export const AddTodo = ({ setShowTodo }) => {
     return (
         <div className="card-wrapper">
             <textarea placeholder='Enter a Title' onChange={(e) => setTitleText(e.target.value)}></textarea>
-            <hr></hr>
+            <hr style={{
+                marginBottom: '10px'
+            }}></hr>
             <textarea placeholder='Enter a Description' onChange={(e) => setDescriptionText(e.target.value)}></textarea>
             <div className="button-section">
                 <button onClick={confirmSaveTodo}>Save</button>

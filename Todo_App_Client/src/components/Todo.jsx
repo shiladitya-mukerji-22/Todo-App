@@ -141,7 +141,9 @@ export const Todo = ({ todo_id, todo_title, todo_description }) => {
             <textarea value={title} onChange={(e) => {
                 setTitle(e.target.value);
             }}></textarea>
-            <hr></hr>
+            <hr style={{
+                marginBottom: '10px'
+            }}></hr>
             <textarea value={description} onChange={(e) => {
                 setDescription(e.target.value);
             }}></textarea>
