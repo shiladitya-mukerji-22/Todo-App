@@ -1,58 +1,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Solway:wght@400;500;700;800&display=swap');
 
-*{
-font-family: solway;
+* {
+    font-family: 'Solway', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    background: linear-gradient(120deg, rgb(248, 211, 175),rgb(255, 187, 197));
+html {
+    /* background: linear-gradient(120deg, rgb(248, 211, 175), rgb(255, 187, 197)) */
+    background-image: url('./src/images/TodoAppBackground.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#app-header-div{
+#app-header-div {
     display: flex;
     justify-content: center;
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Spacing below the header */
 }
 
-.card-wrapper{
+#app-header-div h1 {
+    font-size: 2.5rem;
+    color: #4A4A4A; /* Darker text color for contrast */
+    font-weight: 700;
+}
+
+.card-wrapper {
     border: 2px solid rgba(206, 195, 248, 0.993);
     width: 90%;
-    height: 240px;
-    padding: 15px 20px;
-    border-radius: 5px;
-
+    max-width: 600px; /* Max width for larger screens */
+    margin: 20px auto; /* Centering the card */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white; /* Card background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.card-wrapper > textarea:nth-child(1){
+.card-wrapper > textarea:nth-child(1) {
     width: 100%;
     height: 40px;
     resize: none;
-    font-weight: 800;
+    font-weight: 700; /* Adjusted font-weight */
     border: none;
     background: none;
     border-radius: 5px;
-    font-size: 30px;
+    font-size: 24px; /* Adjusted font-size */
 }
 
-.card-wrapper > textarea:nth-child(3){
+.card-wrapper > textarea:nth-child(3) {
     width: 100%;
     min-height: 110px;
     resize: none;
     font-style: italic;
-    font-weight: 600;
+    font-weight: 500; /* Adjusted font-weight */
     border: none;
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
-.button-section{
+.button-section {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
 }
 
-.button-section button{
+.button-section button {
     margin: 5px 10px;
-    padding: 5px 8px;
+    padding: 8px 15px; /* Increased padding */
     border: none;
     border-radius: 5px;
     background-color: rgb(255, 245, 235);
+    color: rgb(100, 100, 100); /* Button text color */
+    font-weight: 500; /* Font weight for buttons */
+    cursor: pointer; /* Cursor change on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.button-section button:hover {
+    background-color: rgb(248, 211, 175); /* Hover effect */
+}
+
+.add-todo-button {
+    padding: 8px 15px;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: rgb(206, 195, 248); /* Matching the theme */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-todo-button:hover {
+    background-color: rgb(180, 170, 220); /* Slightly darker on hover */
 }
