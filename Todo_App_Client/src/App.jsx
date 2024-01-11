@@ -50,6 +50,7 @@ function App() {
                                     todo_id={todo.todo_id}
                                     todo_title={todo.title}
                                     todo_description={todo.description}
+                                    todo_completed={todo.completed}
                                 />
                             </div>
                         ))}

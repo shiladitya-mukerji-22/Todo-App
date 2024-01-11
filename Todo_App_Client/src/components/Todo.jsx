@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import Modal from 'react-modal'
 
-export const Todo = ({ todo_id, todo_title, todo_description }) => {
+export const Todo = ({ todo_id, todo_title, todo_description, todo_completed }) => {
 
     const [title, setTitle] = useState(todo_title);
     const [description, setDescription] = useState(todo_description);
@@ -135,6 +135,20 @@ export const Todo = ({ todo_id, todo_title, todo_description }) => {
         }
     }
 
+    const handleCompleteTodo = async () => {
+        try {
+            await axios.put('http://localhost:3000/updateTodo', {
+                completed: true
+            }, {
+                params: { todo_id: todo_id }
+            })
+            alert('Todo completed');
+            window.location.reload()
+        } catch (error) {
+            console.log('Error while completing todo:', error)
+        }
+    }
+
 
     return (
         <div className="card-wrapper">
@@ -148,6 +162,7 @@ export const Todo = ({ todo_id, todo_title, todo_description }) => {
                 setDescription(e.target.value);
             }}></textarea>
             <div className="button-section">
+                <button onClick={handleCompleteTodo}>{todo_completed? 'Completed': 'Complete'}</button>
                 <button onClick={confirmUpdateTodo}>Update</button>
                 <button onClick={confirmDeleteTodo}>Delete</button>
             </div>
