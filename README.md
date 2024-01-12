@@ -81,5 +81,3 @@ Contributions are what make the open-source community such a vibrant place to le
 
 -   X - https://twitter.com/shiladityam2
 -   Project Link: https://github.com/shiladitya-mukerji-22/Todo-App
-
-   
