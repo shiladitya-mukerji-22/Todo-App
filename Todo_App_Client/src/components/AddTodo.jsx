@@ -62,7 +62,7 @@ export const AddTodo = ({ setShowTodo }) => {
     const handleSave = async () => {
         try {
             window.location.reload()
-            await axios.post('http://localhost:3000/createTodo', {
+            await axios.post('https://todoapp-kc5d.onrender.com/createTodo', {
                 title: titleText,
                 description: descriptionText
             });

@@ -127,7 +127,7 @@ export const Todo = ({ todo_id, todo_title, todo_description, todo_completed }) 
     const handleDelete = async () => {
         try {
             window.location.reload()
-            await axios.delete('http://localhost:3000/deleteTodo', {
+            await axios.delete('https://todoapp-kc5d.onrender.com/deleteTodo', {
                 params: { todo_id: todo_id }
             });
         } catch (error) {
@@ -137,7 +137,7 @@ export const Todo = ({ todo_id, todo_title, todo_description, todo_completed }) 
 
     const handleCompleteTodo = async () => {
         try {
-            await axios.put('http://localhost:3000/updateTodo', {
+            await axios.put('https://todoapp-kc5d.onrender.com/updateTodo', {
                 completed: true
             }, {
                 params: { todo_id: todo_id }

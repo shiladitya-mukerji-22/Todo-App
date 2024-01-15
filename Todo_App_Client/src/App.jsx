@@ -8,7 +8,7 @@ function App() {
     const [showTodo, setShowTodo] = useState(false);
 
     const getTodos = async () => {
-        const response = await axios.get('http://localhost:3000/getTodos');
+        const response = await axios.get('https://todoapp-kc5d.onrender.com/getTodos');
         console.log(response.data);
         setTodos(response.data);
     };
