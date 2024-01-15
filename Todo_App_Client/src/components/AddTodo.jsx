@@ -61,13 +61,15 @@ export const AddTodo = ({ setShowTodo }) => {
     // Function to save the todo after confirmation
     const handleSave = async () => {
         try {
-            window.location.reload()
+            
             await axios.post('https://todoapp-kc5d.onrender.com/createTodo', {
                 title: titleText,
                 description: descriptionText
             });
+            
             setIsModalOpen(false);
             setShowTodo(false);
+            window.location.reload()
         } catch (error) {
             console.error('Error creating todo:', error);
         }

@@ -109,9 +109,8 @@ export const Todo = ({ todo_id, todo_title, todo_description, todo_completed }) 
 
 
     const handleUpdate = async () => {
-        console.log('entered handleUpdate')
         try {
-            window.location.reload()
+            
             await axios.put('https://todoapp-kc5d.onrender.com/updateTodo', {
                 title: title,
                 description: description
@@ -119,6 +118,7 @@ export const Todo = ({ todo_id, todo_title, todo_description, todo_completed }) 
                 params: { todo_id: todo_id }
             })
             setIsModalOpen(false)
+            window.location.reload()
         } catch (error) {
             console.log('Error while updating', error)
         }
@@ -126,10 +126,12 @@ export const Todo = ({ todo_id, todo_title, todo_description, todo_completed }) 
 
     const handleDelete = async () => {
         try {
-            window.location.reload()
+            
             await axios.delete('https://todoapp-kc5d.onrender.com/deleteTodo', {
                 params: { todo_id: todo_id }
             });
+
+            window.location.reload()
         } catch (error) {
             console.error('Error while deleting:', error)
         }
