@@ -4,7 +4,7 @@ const uuid = require('uuid');
 const cors = require('cors');
 const app = express();
 const PORT = 3000;
-const uri = 'mongodb+srv://<username>:<password>@cluster0.nnegxht.mongodb.net/'; // Add your username and password
+const uri = 'mongodb+srv://admin:XX5Z6wpskUN2V0nI@cluster0.nnegxht.mongodb.net/';
 
 app.use(cors())
 app.use(express.json());
