@@ -112,7 +112,7 @@ export const Todo = ({ todo_id, todo_title, todo_description, todo_completed }) 
         console.log('entered handleUpdate')
         try {
             window.location.reload()
-            await axios.put('http://localhost:3000/updateTodo', {
+            await axios.put('https://todoapp-kc5d.onrender.com/updateTodo', {
                 title: title,
                 description: description
             }, {
