@@ -8,8 +8,7 @@
 }
 
 html {
-    /* background: linear-gradient(120deg, rgb(248, 211, 175), rgb(255, 187, 197)) */
-    background-image: url('./src/images/TodoAppBackground.png');
+    background-image: url('/images/TodoAppBackground.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
